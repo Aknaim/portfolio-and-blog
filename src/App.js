@@ -10,6 +10,7 @@ import About from './components/About';
 import Blog from './components/Blog';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Contact from './components/Contact';
 
 class App extends Component {
 
@@ -46,7 +47,7 @@ class App extends Component {
           <Navbar inverse collapseOnSelect>
             <Navbar.Header>
               <Navbar.Brand>
-              <Link to="/">SN</Link>
+              <Link to="/">Syed Naim</Link>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
@@ -54,10 +55,13 @@ class App extends Component {
               <Nav>
                 <NavItem>
                   <Link to="/about">About</Link>
-              </NavItem>
+                </NavItem>
                 <NavItem>
                   <Link to="/blog">Blog</Link>
-              </NavItem>
+                </NavItem>
+                <NavItem>
+                  <Link to="/contact">Contact</Link>
+                </NavItem>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -68,6 +72,9 @@ class App extends Component {
           <Route exact path='/about' render={() =>
               <About/>
           } />
+          <Route exact path='/contact' render={() =>
+              <Contact/>
+          } />
           <Route exact path='/blog' render={() =>
               this.state.user?
               <Blog/>
@@ -76,7 +83,7 @@ class App extends Component {
           } />
           <Route exact path='/login' render={() =>
               this.state.user?
-              <Redirect to="/"/>
+              <Redirect to="/blog"/>
               :
               <Login login={this.login}/>
           } />
