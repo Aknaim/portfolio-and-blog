@@ -1,0 +1,16 @@
+#footer {
+  text-align: center;
+  height: 100px; 
+  width:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  right:0;
+}
+
+#sourceCode{
+  color : white;
+  text-decoration: underline;
+  /* text-shadow: 1px 1px 1px #FFFF; */
+  font-style: italic;
+}
