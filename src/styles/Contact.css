@@ -1,0 +1,33 @@
+.div-contact{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    margin: 100px;
+
+}
+
+#contactBackground {
+    height: 85vh;
+    width: 100%;
+    /* background-image: url("../assets/ma.jpg"); */
+    /* background-size: 100% 100%; */
+    /* background-repeat: no-repeat; */
+    padding:10px;
+    padding-bottom:60px;   /* Height of the footer */
+    margin:0;
+    padding:0;
+}
+
+#contactBackground:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    background-image: url("../assets/ma.jpg");
+    width: 100%;
+    height: 100%;
+    opacity : 0.80;
+    z-index: -1;
+  }

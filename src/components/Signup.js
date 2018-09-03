@@ -8,10 +8,11 @@ class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name:'',
-      email:'',
-      password:'',
-      redirect: false
+      name: '',
+      email: '',
+      password: '',
+      redirectToLogin: false,
+      redirectToBlog: false
     };
   }
 
@@ -19,42 +20,42 @@ class Signup extends Component {
     this.setState({ email: e.target.value })
   }
 
-  handlePasswordChange= (e) => {
+  handlePasswordChange = (e) => {
     this.setState({ password: e.target.value })
   }
 
-  handleNameChange= (e) => {
+  handleNameChange = (e) => {
     this.setState({ name: e.target.value })
   }
 
   handleLoginChange = () => {
-    this.setState({ redirect: true });
+    this.setState({ redirectToLogin: true });
   }
 
-  signUp() {
-    axios.post('/signup', {
-      name: this.state.name,
-      email: this.state.email,
-      password: this.state.password
-    })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
+  signUp = async () => {
+    try {
+      const response = await axios.post("/users/signup", {
+        name: this.state.name,
+        email: this.state.email,
+        password: this.state.password
       });
+      this.setState({ redirectToBlog: true });
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   render() {
-    const { redirect } = this.state;
+    const { redirectToLogin } = this.state;
+    const { redirectToBlog } = this.state;
 
-    if(redirect){
-      return <Redirect to="/login"/>;
+    if (redirectToLogin || redirectToBlog) {
+      return <Redirect to="/login" />;
     }
 
     return (
       <div className="container-fluid" id="signupBackground">
-        <div className = "div-signup">
+        <div className="div-signup">
           <form className="form-signup">
             {/* <h2 className="form-signup-heading">Please Sign Up</h2> */}
             <label for="inputName" className="sr-only">Name</label>
@@ -66,7 +67,7 @@ class Signup extends Component {
             <button className="btn btn-lg btn-primary btn-block" onClick={this.signUp} type="button">Sign up</button>
           </form>
           <div id="signin">
-            <br/>
+            <br />
             <p>Already have an account?</p>
             <button className="btn btn-sm btn-primary btn-block" onClick={this.handleLoginChange} type="button">Sign in</button>
           </div>
