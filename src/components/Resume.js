@@ -5,7 +5,7 @@ class Resume extends Component {
     render() {
         return (
             <div id="resumeDiv">
-                <iframe id="resumeEmbed" src="https://drive.google.com/file/d/1AQOFu7HmzctXSl3zCXA14G8xAxIqc0Qt/preview" width="1000" height="1000"/>
+                <iframe id="resumeEmbed" src="https://drive.google.com/file/d/1-mMkLSyJH62KL_C45f9lyuaIwoQXUkDc/preview" width="1000" height="1000"/>
             </div>
         );
     }
