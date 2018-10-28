@@ -1,0 +1,8 @@
+1. AWS Deployment
+2. Animation on homepage
+3. Blog navigation bar (jump between blogs)
+4. Blog tags
+5. Blog ordering by date
+6. Background animation
+7. Commens per blog
+8. Make site responsive
