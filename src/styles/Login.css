@@ -16,14 +16,7 @@
     background-image: url("../assets/log4.jpg");    
 }
 
-#aboutmeBackground{
-    /* height: 90vh;
-    width: 90%; */
-    /* background-size: 100% 100%; */
-    /* background-image: url("../assets/anonymous-background_123830656_275.jpeg"); */
-    /* background-repeat: no-repeat; */
-    padding:10px;
-    padding-bottom:60px;   /* Height of the footer */
-    margin:0;
-    padding:0;
-  }
+.container-fluid-login{
+    width: 90%;
+    margin-left: 10%;
+}

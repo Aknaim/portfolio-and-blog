@@ -47,20 +47,22 @@ class Login extends Component {
     }
 
     return (
-      <div className="container-fluid" id="signInBackground">
-        <div className="div-signin">
-          <form className="form-signin">
-            {/* <h2 className="form-signin-heading"> Please Sign In</h2> */}
-            <label for="inputEmail" className="sr-only"> Email address</label>
-            <input type="email" onChange={this.handleEmailChange} id="inputEmail" className="form-control" placeholder="Email address" required autofocus />
-            <label for="inputPassword" className="sr-only"> Password</label>
-            <input type="password" onChange={this.handlePasswordChange} id="inputPassword" className="form-control" placeholder="Password" required />
-            <button className="btn btn-lg btn-primary btn-block" onClick={this.setUser} type="button"> Sign in</button>
-          </form>
-          <div id="signup">
-            <br />
-            <p>Don't have an account yet?</p>
-            <button className="btn btn-sm btn-primary btn-block" onClick={this.handleSignupChange} type="button"> Sign up!</button>
+      <div className="container-fluid-login">
+        <div  id="signInBackground">
+          <div className="div-signin">
+            <form className="form-signin">
+              <p className="form-signin-heading">Please login to learn more about me</p>
+              <label for="inputEmail" className="sr-only"> Email address</label>
+              <input type="email" onChange={this.handleEmailChange} id="inputEmail" className="form-control" placeholder="Email address" required autofocus />
+              <label for="inputPassword" className="sr-only"> Password</label>
+              <input type="password" onChange={this.handlePasswordChange} id="inputPassword" className="form-control" placeholder="Password" required />
+              <button className="btn btn-lg btn-primary btn-block" onClick={this.setUser} type="button"> Sign in</button>
+            </form>
+            <div id="signup">
+              <br />
+              <p>Don't have an account yet?</p>
+              <button className="btn btn-sm btn-primary btn-block" onClick={this.handleSignupChange} type="button"> Sign up!</button>
+            </div>
           </div>
         </div>
       </div>
