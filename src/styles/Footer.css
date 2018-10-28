@@ -11,6 +11,14 @@
 #sourceCode{
   color : white;
   text-decoration: underline;
-  /* text-shadow: 1px 1px 1px #FFFF; */
   font-style: italic;
 }
+
+/* .footerTransition-appear {
+  opacity: 0.01;
+}
+
+.footerTransition-appear.footerTransition-appear-active {
+  opacity: 1;
+  transition: opacity 5s ease-in;
+} */

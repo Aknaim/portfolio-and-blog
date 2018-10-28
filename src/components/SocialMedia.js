@@ -13,7 +13,6 @@ class SocialMedia extends Component {
           <li><a href="https://www.youtube.com/channel/UCiNl5QZ-xkSQBECb-bUaOKg?view_as=subscriber" target="_blank" class="icoYoutube" title="Youtube"><i class="fa fa-youtube"></i></a></li>
           <li><a href="https://www.twitch.tv/aknaim" target="_blank" class="icoTwitch" title="Twitch"><i class="fa fa-twitch" aria-hidden="true"></i></a></li>
           <a id="backToTop" href="#header">Return to Top</a>
-          {/* <i class="fa fa-arrow-up" aria-hidden="true"></i> */}
         </ul>
       </div>
     );
