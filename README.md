@@ -1,4 +1,4 @@
-You can reach the site at: syednaim.ddns.net
+You can reach the site at: http://18.221.82.55
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
