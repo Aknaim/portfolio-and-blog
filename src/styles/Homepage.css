@@ -3,35 +3,37 @@ body {
    margin:0;
    padding:0;
    height:100%;
+   color:white;
 }
 #container {
    min-height:100%;
    position:relative;
    height:100%;
 }
-#header {
-   background:#34373d;
-   padding:10px;
-   height:100px;
-}
 #body {
    padding:10px;
-   padding-bottom:60px;   /* Height of the footer */
-   background-size: 100% 100%;
-   background-image: url("../assets/thumb-1920-232854.jpg");
-   background-repeat: no-repeat;
+   padding-bottom:40px;
    text-align: center;
    width:100%;
+}
+.homepageImg{
+   max-width: 100%;
+   height: 600px;
+   box-shadow: 0 0 20px 4px #181c29;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #footer {
    position:absolute;
    bottom:0;
    width:100%;
-   height:40px;   /* Height of the footer */
-   background:#34373d;
+   height:40px;
 }
 #welcomeMsg{
-  line-height: 600px;
-  /* opacity: 0.85; */
+  opacity: 0.85;
   font-weight: bold;
 }
