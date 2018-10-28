@@ -1,47 +1,13 @@
 .lichess {
     color : white;
     text-decoration: underline;
-    /* text-shadow: 1px 1px 1px #FFFF; */
     font-style: italic;
 }
 
 .email {
   color : white;
   text-decoration: underline;
-  /* text-shadow: 1px 1px 1px #FFFF; */
   font-style: italic;
-}
-
-#aboutmeBackground{
-  height: 100vh;
-  /* width: 90%; */
-  /* background-size: 100% 100%; */
-  /* background-image: url("../assets/anonymous-background_123830656_275.jpeg"); */
-  /* background-repeat: no-repeat; */
-  padding:10px;
-  padding-bottom:60px;   /* Height of the footer */
-  margin:0;
-  padding:0;
-}
-
-#aboutmeBackground:after {
-  content : "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 100% 100%;
-  background-image: url("../assets/anonymous-background_123830656_275.jpeg");
-  width: 100%;
-  height: 100%;
-  opacity : 0.65;
-  z-index: -1;
-}
-
-#aboutmeText{
-  /* position: absolute; */
-  width: 500px;
-  height: 100%;
 }
 
 html,
@@ -55,15 +21,30 @@ body {
    position:relative;
    height:100%;
 }
-#header {
-   background:#34373d;
-   padding:10px;
-   height:100px;
+
+.col-md-6.col-md-offset-3{
+  background-color: rgb(153, 143, 134);
+  box-shadow: 0 0 20px 4px #181c29;
 }
+
+.w3-margin.w3-circle {
+  width:50%;
+  box-shadow: 0 0 20px 4px #181c29;
+}
+
 #footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:40px;   /* Height of the footer */
-   background:#34373d;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:40px;
+}
+
+#bodyAbout {
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.bg-pan-left {
+	-webkit-animation: bg-pan-left 8s both;
+	        animation: bg-pan-left 8s both;
 }
