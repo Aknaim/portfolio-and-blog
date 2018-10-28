@@ -54,22 +54,23 @@ class Signup extends Component {
     }
 
     return (
-      <div className="container-fluid" id="signupBackground">
-        <div className="div-signup">
-          <form className="form-signup">
-            {/* <h2 className="form-signup-heading">Please Sign Up</h2> */}
-            <label for="inputName" className="sr-only">Name</label>
-            <input type="name" onChange={this.handleNameChange} id="inputName" className="form-control" placeholder="Name" required autofocus />
-            <label for="inputEmail" className="sr-only">Email address</label>
-            <input type="email" onChange={this.handleEmailChange} id="inputEmail" className="form-control" placeholder="Email address" required autofocus />
-            <label for="inputPassword" className="sr-only">Password</label>
-            <input type="password" onChange={this.handlePasswordChange} id="inputPassword" className="form-control" placeholder="Password" required />
-            <button className="btn btn-lg btn-primary btn-block" onClick={this.signUp} type="button">Sign up</button>
-          </form>
-          <div id="signin">
-            <br />
-            <p>Already have an account?</p>
-            <button className="btn btn-sm btn-primary btn-block" onClick={this.handleLoginChange} type="button">Sign in</button>
+      <div className="container-fluid-signup" >
+        <div id="signupBackground">
+          <div className="div-signup">
+            <form className="form-signup">
+              <label for="inputName" className="sr-only">Name</label>
+              <input type="name" onChange={this.handleNameChange} id="inputName" className="form-control" placeholder="Name" required autofocus />
+              <label for="inputEmail" className="sr-only">Email address</label>
+              <input type="email" onChange={this.handleEmailChange} id="inputEmail" className="form-control" placeholder="Email address" required autofocus />
+              <label for="inputPassword" className="sr-only">Password</label>
+              <input type="password" onChange={this.handlePasswordChange} id="inputPassword" className="form-control" placeholder="Password" required />
+              <button className="btn btn-lg btn-primary btn-block" onClick={this.signUp} type="button">Sign up</button>
+            </form>
+            <div id="signin">
+              <br />
+              <p>Already have an account?</p>
+              <button className="btn btn-sm btn-primary btn-block" onClick={this.handleLoginChange} type="button">Sign in</button>
+            </div>
           </div>
         </div>
       </div>

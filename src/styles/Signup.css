@@ -15,3 +15,8 @@
     background-size: cover;
     background-image: url("../assets/Page_Transparent_Background_Oasis_Skin_1.png");
   }
+
+.container-fluid-signup{
+    width: 90%;
+    margin-left: 10%;
+}
