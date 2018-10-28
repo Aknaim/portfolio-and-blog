@@ -22,12 +22,21 @@ class Blog extends Component {
     renderBlogs = (blogArray) => {
         const data = blogArray;
         const listItems = data.map((d) =>
-        <div>
-            <hr/>
-            <h2>{d.title}</h2>
-            <h5><span className="glyphicon glyphicon-time"></span> Post by {d.author}, {d.date}.</h5>
-            <h5><span className="label label-danger">Book</span> <span className="label label-primary">Review</span></h5><br/>
-            <p className="contentP">{d.content}</p>
+        <div id="individualBlogPost" class="col-md-6 col-md-offset-3">
+            {d.image ? <div className="blogHeader">
+                <h2>{d.title}</h2>
+                <h5><span className="glyphicon glyphicon-time"></span> Post by {d.author}, {d.date}.</h5>
+                <h5><span className="label label-danger">Book</span> <span className="label label-primary">Review</span></h5><br/>
+            </div> 
+            :
+            <div className="blogHeader2">
+                <h2>{d.title}</h2>
+                <h5><span className="glyphicon glyphicon-time"></span> Post by {d.author}, {d.date}.</h5>
+                <h5><span className="label label-danger">Book</span> <span className="label label-primary">Review</span></h5><br/>
+            </div>
+            }
+            {d.image ? <div className="blogImageContainer"><p className="blogImageContainer"><img className="blogImage" src={d.image} style={{margin: "20px"}}/></p></div> : <p/>}
+            <p className="contentP" >{d.content}</p>
             <br/>
             <br/>
         </div>
@@ -43,10 +52,10 @@ class Blog extends Component {
         var blogArray = this.state.blogArray;
 
         return (
-            <div id="blogBackground">
+            <div id="blogBody">
                 <br/>
-                <div>{/* <div className="col-sm-9"> */}
-                    <h4><small>RECENT POSTS</small></h4>
+                <div>
+                    <center id="blogTitle"><h1>Welcome to my blog!</h1></center>
                     {this.renderBlogs(blogArray)}
                 </div>
             </div>
