@@ -111,10 +111,6 @@ background: #394D61;
   
 /* General CSS */
 
-body {
-    background-color: #34373D;
-}
-
 textarea {
     height: auto;
 }
@@ -130,4 +126,6 @@ textarea {
     overflow: visible; 
     white-space: pre-wrap;
     height:auto;  /* just added this line */
+    width:auto;
+    overflow-wrap: break-word;
 }

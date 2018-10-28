@@ -11,6 +11,7 @@ class Admin extends Component {
             title: '',
             author: '',
             content: '',
+            image: '',
             editBlog: false,
             editBlogData: ''
         }
@@ -32,6 +33,7 @@ class Admin extends Component {
                 <td>{d.title}</td>
                 <td>{d.author}</td>
                 <td className="ellipsis">{d.content}</td>
+                <td className="ellipsis">{d.image}</td>
                 <td>{d.date}</td>
                 <td><a index={index} id={d._id} onClick={this.editBlogLoadData} href="#editBlog">Edit</a>|<a index={index} id={d._id} onClick={this.deleteBlog}>Delete</a></td>
             </tr>
@@ -55,11 +57,16 @@ class Admin extends Component {
         this.setState({ content: e.target.value })
     }
 
+    handleImageChange = (e) => {
+        this.setState({ image: e.target.value })
+    }
+
     createBlog = async () => {
         const data = {
             title: this.state.title,
             author: this.state.author,
             content: this.state.content,
+            image: this.state.image,
             date: new Date()
         };
 
@@ -73,6 +80,7 @@ class Admin extends Component {
             const res = await axios.post("/blogs/createBlog", data, header);
             console.log(res.data);
             this.componentDidMount();
+            <script>{alert("Blog successfully created!")}</script>;
         } catch (e) {
             console.error(e);
         }
@@ -127,13 +135,15 @@ class Admin extends Component {
                 <label for="inputAuthor" className="sr-only">Author</label>
                 <input type="text" onChange={this.handleAuthorChangeEdit} value={this.state.editBlogData.author} id="inputAuthor" className="form-control" required />
                 <label for="inputContent" className="sr-only">Content</label>
+                <input type="text" onChange={this.handleImageChangeEdit} value={this.state.editBlogData.image} id="inputImage" className="form-control" required />
+                <label for="inputImage" className="sr-only">Image</label>
                 <textarea type="text" rows="10" onChange={this.handleContentChangeEdit} value={this.state.editBlogData.content} id="inputContent" className="form-control" required />
                 <button className="btn btn-lg btn-primary btn-block" onClick={this.editBlog} type="button">Edit Blog</button>
             </form>
         );
 
         return (
-            <div className="col-sm-9" id="editBlog" >
+            <div className="col-sm-8 col-sm-offset-2" id="editBlog" >
                 <h4><small>EDIT BLOG POST</small></h4>
                 {editBlogDiv}
                 <br />
@@ -150,13 +160,19 @@ class Admin extends Component {
 
     handleAuthorChangeEdit = (e) => {
         let editBlogData = Object.assign({}, this.state.editBlogData);    //creating copy of object
-        editBlogData.author = e.target.value;                              //updating value
+        editBlogData.author = e.target.value;                             //updating value
+        this.setState({ editBlogData });
+    }
+
+    handleImageChangeEdit = (e) => {
+        let editBlogData = Object.assign({}, this.state.editBlogData);    //creating copy of object
+        editBlogData.image = e.target.value;                            //updating value
         this.setState({ editBlogData });
     }
 
     handleContentChangeEdit = (e) => {
         let editBlogData = Object.assign({}, this.state.editBlogData);    //creating copy of object
-        editBlogData.content = e.target.value;                              //updating value
+        editBlogData.content = e.target.value;                            //updating value
         this.setState({ editBlogData });
     }
 
@@ -165,6 +181,7 @@ class Admin extends Component {
         const data = {
             title: this.state.editBlogData.title,
             author: this.state.editBlogData.author,
+            image: this.state.editBlogData.image,
             content: this.state.editBlogData.content
         };
 
@@ -190,19 +207,21 @@ class Admin extends Component {
         return (
             <div id="adminDiv">
                 <br />
-                <div className="col-sm-9" id="createBlog" >
+                <div className="col-sm-8 col-sm-offset-2" id="createBlog" >
                     <h4><small>CREATE A NEW BLOG POST</small></h4>
                     <form className="form-signup">
                         <label for="inputTitle" className="sr-only">Title</label>
                         <input type="text" onChange={this.handleTitleChange} id="inputTitle" className="form-control" placeholder="Title" required />
                         <label for="inputAuthor" className="sr-only">Author</label>
                         <input type="text" onChange={this.handleAuthorChange} id="inputAuthor" className="form-control" placeholder="Author" required />
+                        <label for="inputImage" className="sr-only">Image</label>
+                        <input type="text" onChange={this.handleImageChange} id="inputImage" className="form-control" placeholder="Image URL (Optional)" required />
                         <label for="inputContent" className="sr-only">Content</label>
                         <textarea type="text" rows="10" onChange={this.handleContentChange} id="inputContent" className="form-control" placeholder="Content" required />
                         <button className="btn btn-lg btn-primary btn-block" onClick={this.createBlog} type="button">Create Blog</button>
                     </form>
                 </div>
-                <div className="col-sm-9">
+                <div className="col-sm-8 col-sm-offset-2">
                     <h4><small>POSTS</small></h4>
                     <div className="container" id="adminContainer">
                         {/* <div className="panel panel-default p50 uth-panel"> */}
@@ -213,6 +232,7 @@ class Admin extends Component {
                                     <th>Title</th>
                                     <th>Author</th>
                                     <th>Content</th>
+                                    <th>Image</th>
                                     <th>Date</th>
                                     <th>Action</th>
                                 </tr>
