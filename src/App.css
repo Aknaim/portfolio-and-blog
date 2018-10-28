@@ -27,11 +27,62 @@
   to { transform: rotate(360deg); }
 }
 
+/* override bootstrap navbar colors */
+.navbar,
+.navbar-default {
+    background-image: linear-gradient(to bottom,#2c4053 0,#2c4053 100%) !important; /* override background image gradient w/ flat color */
+    box-shadow: 0 0 10px 2px #181c29;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand>img {
+  padding: 7px 14px;
+}
+
+#header {
+  background: #434343;
+  padding-bottom:10px;
+  height:60px;
+}
+
 body {
-  background-color: #34373d;
+  background: #434343;
   color: white;
+}
+
+#footer {
+  background: #434343;
+  padding-top:10px;
 }
 
 h2 h4 {
   color: white;
 }
+
+h1,h2,h3,h4{
+  font-family: 'Eczar', serif;
+}
+
+p,li,a,h5{
+  font-family: 'Proza Libre', sans-serif;
+}
+
+a {
+  color: white;
+  cursor: hand;
+}
+
+a:visited {
+  color: white;
+}
+
+/* .navbarTransition-appear {
+  opacity: 0.01;
+}
+
+.navbarTransition-appear.navbarTransition-appear-active {
+  opacity: 1;
+  transition: opacity 3s ease-in;
+} */
