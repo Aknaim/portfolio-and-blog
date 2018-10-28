@@ -2,3 +2,20 @@ iframe {
     display: block;
     margin: 0 auto;
  }
+
+ #professionalDevelopmentHeader{
+    text-align: center;
+ }
+
+ #professionalDevelopment{
+    background-color: rgb(153, 143, 134);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    text-align: left;
+ }
+
+ #bodyResume{
+     overflow: hidden;
+ }
