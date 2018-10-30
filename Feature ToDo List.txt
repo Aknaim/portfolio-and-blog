@@ -1,4 +1,4 @@
-1. AWS Deployment
+1. AWS Deployment -- Done
 2. Animation on homepage
 3. Blog navigation bar (jump between blogs)
 4. Blog tags
@@ -6,3 +6,6 @@
 6. Background animation
 7. Commens per blog
 8. Make site responsive
+9. Add invalid login error message
+10. Add password recovery
+11. Add email format and address verification
