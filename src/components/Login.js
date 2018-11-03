@@ -35,6 +35,7 @@ class Login extends Component {
       });
       this.props.login(response.data);
     } catch (e) {
+      <script>{alert("Please try again, either your username or password is incorrect.")}</script>;
       console.error(e);
     }
   }
