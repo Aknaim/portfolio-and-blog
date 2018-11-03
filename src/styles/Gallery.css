@@ -79,3 +79,7 @@ body {
     margin-bottom: 100px;
     margin-left: 20px;
 }
+
+#thumbnailMsg{
+    text-align: center;
+}

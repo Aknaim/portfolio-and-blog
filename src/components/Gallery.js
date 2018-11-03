@@ -94,6 +94,7 @@ class Gallery extends Component {
                 <ButtonLast>Last Slide</ButtonLast>
               </CarouselProvider>
               <div id="imageThumbnails">
+                  <p id="thumbnailMsg">Click and hold to enlarge thumbnails below.</p>
                   <img class='galleryImages' src={Iceland1}/>
                   <img class='galleryImages' src={Iceland2}/>
                   <img class='galleryImages' src={Iceland3}/>
