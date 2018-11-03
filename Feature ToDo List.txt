@@ -6,6 +6,7 @@
 6. Background animation
 7. Commens per blog
 8. Make site responsive
-9. Add invalid login error message
+9. Add invalid login error message -- Done
 10. Add password recovery
 11. Add email format and address verification
+12. Click to enlarge thumbnail message for gallery page -- Done
